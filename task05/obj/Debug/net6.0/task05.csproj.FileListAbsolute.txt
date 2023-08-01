@@ -1,0 +1,15 @@
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\bin\Debug\net6.0\task05.exe
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\bin\Debug\net6.0\task05.deps.json
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\bin\Debug\net6.0\task05.runtimeconfig.json
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\bin\Debug\net6.0\task05.dll
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\bin\Debug\net6.0\task05.pdb
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.csproj.AssemblyReference.cache
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.AssemblyInfoInputs.cache
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.AssemblyInfo.cs
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.csproj.CoreCompileInputs.cache
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.dll
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\refint\task05.dll
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.pdb
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\task05.genruntimeconfig.cache
+D:\Learn\Introduction_to_programming_languages_seminar1\task05\obj\Debug\net6.0\ref\task05.dll
