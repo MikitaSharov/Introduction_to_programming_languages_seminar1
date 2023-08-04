@@ -14,7 +14,7 @@ while (number_check == 0)
     if (number >= 100 && number < 1000)
     {
         Console.WriteLine($"{number / 10 % 10}");
-        number_check = 1;
+        number_check++;
     }
-    else Console.WriteLine("Error!");
+    else Console.WriteLine("Error! Three digits");
 }
