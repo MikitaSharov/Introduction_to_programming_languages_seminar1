@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nikita\\.nuget\\packages\\": {}
+    "C:\\Users\\Envy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Learn\\Introduction_to_programming_languages_seminar1\\task001\\task001.csproj",
+      "projectUniqueName": "c:\\Learn\\Introduction_to_programming_languages_seminar1\\task001\\task001.csproj",
       "projectName": "task001",
-      "projectPath": "D:\\Learn\\Introduction_to_programming_languages_seminar1\\task001\\task001.csproj",
-      "packagesPath": "C:\\Users\\Nikita\\.nuget\\packages\\",
-      "outputPath": "D:\\Learn\\Introduction_to_programming_languages_seminar1\\task001\\obj\\",
+      "projectPath": "c:\\Learn\\Introduction_to_programming_languages_seminar1\\task001\\task001.csproj",
+      "packagesPath": "C:\\Users\\Envy\\.nuget\\packages\\",
+      "outputPath": "c:\\Learn\\Introduction_to_programming_languages_seminar1\\task001\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nikita\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Envy\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
