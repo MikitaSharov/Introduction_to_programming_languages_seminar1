@@ -6,6 +6,7 @@
 Console.WriteLine("Enter number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (number < 0) number = number*-1;
 while (number >= 1000) number = number / 10;
 if (number < 1000 && number >= 100) Console.WriteLine($"{number % 10}");
 else Console.WriteLine("Don't have third digit!");
