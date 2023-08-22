@@ -30,7 +30,7 @@ if (userNumber > 9999 && userNumber < 100000)
     if (userNumber == numberTurn) Console.WriteLine("true");
     else Console.WriteLine("false");
 }
-else if (userNumber < -9999 && userNumber > -100000)
+else if (userNumber < -9999 && userNumber > -100000) // можно умножить на -1 
 {
     while (number < 0)
     {
