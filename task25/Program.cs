@@ -8,6 +8,8 @@ Console.WriteLine("Enter B: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(Exponent(numberA, numberB));
 
+if (numberB < 0) System.Console.WriteLine("EXPONENT > 0");
+
 int Exponent(int numberA, int numberB)
 {
     int numberC = 1;
