@@ -5,8 +5,21 @@
 
 Console.Write("Enter 5 digits number: ");
 int userNumber = Convert.ToInt32(Console.ReadLine());
-int number = userNumber;
+int number = userNumber; // нужна для while
 int numberTurn = 0;
+
+if (userNumber < 0) userNumber = userNumber * -1;
+
+if (userNumber > 9999 && userNumber < 100000)
+{
+    for (int i = userNumber; i > 0; i /= 10)
+    {
+        numberTurn = i % 10 + numberTurn * 10;
+    }
+    if (userNumber == numberTurn) Console.WriteLine("true");
+    else Console.WriteLine("false");
+}
+else Console.WriteLine("error input");
 
 /* if (userNumber > 9999 && userNumber < 100000)
 {
@@ -20,7 +33,7 @@ else if (userNumber < -9999 && userNumber > -100000)
 }
 else Console.WriteLine("error input"); */
 
-if (userNumber > 9999 && userNumber < 100000)
+/* if (userNumber > 9999 && userNumber < 100000)
 {
     while (number > 0)
     {
@@ -40,4 +53,4 @@ else if (userNumber < -9999 && userNumber > -100000) // можно умножи�
     if (userNumber == numberTurn) Console.WriteLine("true");
     else Console.WriteLine("false");
 }
-else Console.WriteLine("error input");
+else Console.WriteLine("error input"); */
