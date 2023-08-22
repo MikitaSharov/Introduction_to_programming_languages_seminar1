@@ -4,11 +4,40 @@
 23432 -> да */
 
 Console.Write("Enter 5 digits number: ");
-int number = Convert.ToInt16(Console.ReadLine());
+int userNumber = Convert.ToInt32(Console.ReadLine());
+int number = userNumber;
+int numberTurn = 0;
 
-if (number > 9999 && number < 100000)
+/* if (userNumber > 9999 && userNumber < 100000)
 {
-    if (number % 10 == number / 10000 && number / 10 % 10 == number / 1000 % 10) Console.WriteLine("true");
+    if (userNumber % 10 == userNumber / 10000 && userNumber / 10 % 10 == userNumber / 1000 % 10) Console.WriteLine("true");
+    else Console.WriteLine("false");
+}
+else if (userNumber < -9999 && userNumber > -100000)
+{
+    if (userNumber % 10 == userNumber / 10000 && userNumber / 10 % 10 == userNumber / 1000 % 10) Console.WriteLine("true");
+    else Console.WriteLine("false");
+}
+else Console.WriteLine("error input"); */
+
+if (userNumber > 9999 && userNumber < 100000)
+{
+    while (number > 0)
+    {
+        numberTurn = number % 10 + numberTurn * 10;
+        number = number / 10;
+    }
+    if (userNumber == numberTurn) Console.WriteLine("true");
+    else Console.WriteLine("false");
+}
+else if (userNumber < -9999 && userNumber > -100000)
+{
+    while (number < 0)
+    {
+        numberTurn = number % 10 + numberTurn * 10;
+        number = number / 10;
+    }
+    if (userNumber == numberTurn) Console.WriteLine("true");
     else Console.WriteLine("false");
 }
 else Console.WriteLine("error input");
