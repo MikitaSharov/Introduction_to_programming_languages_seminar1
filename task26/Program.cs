@@ -12,9 +12,9 @@ System.Console.WriteLine(CountDigitsFromNumber(userNumber));
 int CountDigitsFromNumber(int number)
 {
     int count = 0;
-    while(number>0)
+    while (number > 0)
     {
-        number/=10;
+        number /= 10;
         count++;
     }
 

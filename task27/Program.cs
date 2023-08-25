@@ -9,10 +9,10 @@ Console.WriteLine(SumDigits(Convert.ToInt32(Console.ReadLine())));
 int SumDigits(int number)
 {
     int sumDigits = 0;
-    while(number > 0)
+    while (number > 0)
     {
-        sumDigits = sumDigits + number%10;
-        number/=10;
+        sumDigits = sumDigits + number % 10;
+        number /= 10;
     }
 
     return sumDigits;
