@@ -3,14 +3,16 @@
 3 -> 11
 2 -> 10 */
 
-Console.Write("Введите число: ");
-int a = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
 
-string Delenie(int a)
+Console.Write("Введите число: ");
+int decimalNumber = Convert.ToInt32(Console.ReadLine());
+
+string DecimalNumberConvertToBinary(int numberForBinary)
 {
     string result = String.Empty;
     int temp = 0;
-    for (int i = a; i > 0; i/=2)
+    for (int i = decimalNumber; i > 0; i/=2)
     {
         temp = i%2;
         result = temp + result;
@@ -18,5 +20,5 @@ string Delenie(int a)
 
 return result;
 }
-string b = Delenie(a);
-Console.WriteLine(b);
+
+Console.WriteLine(DecimalNumberConvertToBinary(decimalNumber));
