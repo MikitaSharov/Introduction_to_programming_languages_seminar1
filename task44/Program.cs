@@ -19,9 +19,16 @@ int[] FillFibArray()
 
     return array;
 }
+void PrintArray(int[] arrayForPrint)
+{
+    Console.Write("[");
+    for (int i = 0; i < arrayForPrint.Length; i++)
+    {
+        Console.Write(arrayForPrint[i]);
+        if (i < arrayForPrint.Length - 1) System.Console.Write(", ");
+    }
+    Console.WriteLine("]");
+}
 
 int[] fibArray = FillFibArray();
-for (int i = 0; i < fibArray.Length; i++)
-{
-    Console.WriteLine(fibArray[i]);
-}
+PrintArray(fibArray);
