@@ -47,6 +47,6 @@ int[] TurnArray(int[] arrayForTurn)
 Console.ForegroundColor=ConsoleColor.Blue;
 PrintArray(userArray);
 int[] turnArray = TurnArray(userArray);
-Console.ForegroundColor=ConsoleColor.Green;
+Console.ForegroundColor=ConsoleColor.Green; //меняет цвет текста в консоле
 PrintArray(turnArray);
 Console.ForegroundColor=ConsoleColor.White;
