@@ -11,10 +11,10 @@
 int[,] Fill2DArray()
 {
     Console.Write("Введите кол-во столбцов: ");
-    int rows = Convert.ToInt32(Console.ReadLine());
+    int cols = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите кол-во строк: ");
-    int lines = Convert.ToInt32(Console.ReadLine());
-    int[,] array = new int[lines, rows];
+    int rows = Convert.ToInt32(Console.ReadLine());
+    int[,] array = new int[rows, cols];
     Console.Write("Введите минимальное значение: ");
     int minValue = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите максимальное значение: ");
@@ -51,9 +51,9 @@ void PrintElementFrom2DArray(int[,] array)
     Console.Write("Строка: ");
     int line = Convert.ToInt32(Console.ReadLine());
     Console.Write("Столбец: ");
-    int row = Convert.ToInt32(Console.ReadLine());
+    int col = Convert.ToInt32(Console.ReadLine());
 
-    if (line < array.GetLength(0) && row < array.GetLength(1)) Console.WriteLine(array[line, row]);
+    if (line < array.GetLength(0) && col < array.GetLength(1)) Console.WriteLine(array[line, col]);
     else Console.WriteLine("нет такого элемента");
 }
 
