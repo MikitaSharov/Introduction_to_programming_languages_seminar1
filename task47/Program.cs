@@ -8,10 +8,10 @@ m = 3, n = 4.
 double[,] Fill2DArray()
 {
     Console.Write("Введите кол-во столбцов: ");
-    int rows = Convert.ToInt32(Console.ReadLine());
+    int cols = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите кол-во строк: ");
-    int lines = Convert.ToInt32(Console.ReadLine());
-    double[,] array = new double[lines, rows];
+    int rows = Convert.ToInt32(Console.ReadLine());
+    double[,] array = new double[rows, cols];
     Console.Write("Введите минимальное значение: ");
     int minValue = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите максимальное значение: ");
