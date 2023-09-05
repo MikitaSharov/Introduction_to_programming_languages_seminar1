@@ -29,19 +29,22 @@ double[,] Fill2DArray()
 }
 void Print2DArray(double[,] arrayForPrint)
 {
+    Console.Write($"[ ]\t");
+    for (int i = 0; i < arrayForPrint.GetLength(1); i++)
+    {
+        Console.Write($"[{i}]\t");
+    }
+    Console.WriteLine();
+
     for (int i = 0; i < arrayForPrint.GetLength(0); i++)
     {
+        Console.Write($"[{i}]\t");
         for (int j = 0; j < arrayForPrint.GetLength(1); j++)
         {
-            if (j == 0) Console.Write("|");
-            Console.Write(Math.Round(arrayForPrint[i, j], 1));
-            if (j != arrayForPrint.GetLength(1) - 1) Console.Write(", ");
-            else Console.Write("|");
-            
+            Console.Write(Math.Round(arrayForPrint[i, j], 2) + "\t");
         }
         Console.WriteLine();
     }
 }
 
-double[,] userArray = Fill2DArray();
-Print2DArray(userArray);
+Print2DArray(Fill2DArray());
