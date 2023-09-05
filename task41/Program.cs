@@ -6,7 +6,6 @@
 Console.Write("Сколько чисел вы хотите ввести: ");
 int length = Convert.ToInt32(Console.ReadLine());
 int[] userArray = FillArray(length);
-int count = CountElementsMoreThanZero(userArray);
 
 int[] FillArray(int length)
 {
@@ -41,4 +40,4 @@ void PrintArray(int[] arrayForPrint)
 }
 
 PrintArray(userArray);
-Console.WriteLine($"Вы ввели {count} чисел больше 0");
+Console.WriteLine($"Вы ввели {CountElementsMoreThanZero(userArray)} чисел больше 0");
