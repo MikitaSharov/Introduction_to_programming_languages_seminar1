@@ -30,17 +30,20 @@ int[,] Fill2DArray()
 }
 void Print2DArray(int[,] arrayForPrint)
 {
+    System.Console.Write($"[ ]\t");
+    for (int i = 0; i < arrayForPrint.GetLength(1); i++)
+    {
+        Console.Write($"[{i}]\t");
+    }
+    System.Console.WriteLine();
     for (int i = 0; i < arrayForPrint.GetLength(0); i++)
     {
+        Console.Write($"[{i}]\t");
         for (int j = 0; j < arrayForPrint.GetLength(1); j++)
         {
-            if (j == 0) Console.Write("|");
-            Console.Write(arrayForPrint[i, j]);
-            if (j != arrayForPrint.GetLength(1) - 1) Console.Write(", ");
-            else Console.Write("|");
-
+            System.Console.Write(arrayForPrint[i, j] + "\t");
         }
-        Console.WriteLine();
+        System.Console.WriteLine();
     }
 }
 double[] AvgEveryColsFrom2DArray(int[,] arrayForAvgEveryCols)
@@ -61,13 +64,12 @@ double[] AvgEveryColsFrom2DArray(int[,] arrayForAvgEveryCols)
 }
 void PrintArray(double[] arrayForPrint)
 {
-    Console.Write("[");
+    Console.Write("[Avg]\t");
     for (int i = 0; i < arrayForPrint.Length; i++)
     {
-        Console.Write(arrayForPrint[i]);
-        if (i < arrayForPrint.Length - 1) System.Console.Write(", ");
+        Console.Write(Math.Round(arrayForPrint[i], 1));
+        if (i < arrayForPrint.Length - 1) System.Console.Write("\t");
     }
-    Console.WriteLine("]");
 }
 
 int[,] userArray = Fill2DArray();
