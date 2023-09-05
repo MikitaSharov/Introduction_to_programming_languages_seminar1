@@ -34,17 +34,20 @@ int[,] Fill2DArray()
 }
 void Print2DArray(int[,] arrayForPrint)
 {
+    System.Console.Write($"[ ]\t");
+    for (int i = 0; i < arrayForPrint.GetLength(1); i++)
+    {
+        Console.Write($"[{i}]\t");
+    }
+     System.Console.WriteLine();
     for (int i = 0; i < arrayForPrint.GetLength(0); i++)
     {
+        Console.Write($"[{i}]\t");
         for (int j = 0; j < arrayForPrint.GetLength(1); j++)
         {
-            if (j == 0) Console.Write("|");
-            Console.Write(arrayForPrint[i, j]);
-            if (j != arrayForPrint.GetLength(1) - 1) Console.Write(", ");
-            else Console.Write("|");
-
+            System.Console.Write(arrayForPrint[i,j] +"\t");
         }
-        Console.WriteLine();
+        System.Console.WriteLine();
     }
 }
 void PrintElementFrom2DArray(int[,] array)
