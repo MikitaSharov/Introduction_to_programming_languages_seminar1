@@ -8,6 +8,8 @@
 17 -> такого числа в массиве нет
  */
 
+Console.Clear();
+
 int[,] Fill2DArray()
 {
     Console.Write("Введите кол-во столбцов: ");
@@ -56,8 +58,28 @@ void PrintElementFrom2DArray(int[,] array)
     if (line < array.GetLength(0) && col < array.GetLength(1)) Console.WriteLine(array[line, col]);
     else Console.WriteLine("нет такого элемента");
 }
+void PrintFindNumberFrom2DArray(int[,] array2DForFindNumber)
+{
+    Console.Write("Введите искомое число: ");
+    int userNumber = Convert.ToInt32(Console.ReadLine());
+    int checkNumber = 0;
 
+    for (int i = 0; i < array2DForFindNumber.GetLength(0); i++)
+    {
+        for (int j = 0; j < array2DForFindNumber.GetLength(1); j++)
+        {
+            if (array2DForFindNumber[i, j] == userNumber)
+            {
+                Console.WriteLine($"Число {userNumber} находится на {i} строке, {j} столбце");
+                checkNumber = 1;                
+            }
+        }
+    }
+
+    if (checkNumber == 0) Console.WriteLine($"Числа {userNumber} нет в массиве");
+}
 
 int[,] userArray = Fill2DArray();
 Print2DArray(userArray);
 PrintElementFrom2DArray(userArray);
+PrintFindNumberFrom2DArray(userArray);
