@@ -1,5 +1,12 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
 
+/* можно делать разными способами:
+ - создать временную переменную;
+ - создать временный массив;
+ - прибавить к элементам первой строки элементы последней строки,
+    присвоить значениям последней строки разницу между первой и последней,
+    присвоить значениям первой строки разницу между первой и последней. */
+
 int[,] Fill2DArray()
 {
     Console.Write("Введите кол-во столбцов: ");
@@ -58,9 +65,23 @@ int[,] SwapFirstWithLastRowsInArray(int[,] arrayForSwap)
 
     return arrayForSwap;
 }
+int[,] SwapFirstWithLastRowsInArrayWithoutTemp(int[,] arrayForSwap)
+{
+    int row = arrayForSwap.GetLength(0);
+
+    for (int j = 0; j < arrayForSwap.GetLength(1); j++)
+    {
+        arrayForSwap[0, j] = arrayForSwap[0, j] + arrayForSwap[row - 1, j];
+        arrayForSwap[row - 1, j] = arrayForSwap[0, j] - arrayForSwap[row - 1, j];
+        arrayForSwap[0, j] = arrayForSwap[0, j] - arrayForSwap[row - 1, j];
+    }
+
+    return arrayForSwap;
+}
 
 int[,] userArray = Fill2DArray();
 Print2DArray(userArray);
 Console.WriteLine();
 Print2DArray(SwapFirstWithLastRowsInArray(userArray));
-
+Console.WriteLine();
+Print2DArray(SwapFirstWithLastRowsInArrayWithoutTemp(userArray));
