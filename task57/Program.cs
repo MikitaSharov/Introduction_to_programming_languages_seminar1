@@ -3,6 +3,10 @@
 
 Console.Clear();
 
+int[,] user2DArray = Fill2DArray();
+int[] userArray = Convert2DArrayToArray(user2DArray);
+int[] uniqArray = FillArrayOnlyUniqElements(userArray);
+
 int[,] Fill2DArray()
 {
     Console.Write("Введите кол-во столбцов: ");
@@ -71,24 +75,76 @@ int[] Convert2DArrayToArray(int[,] array2DForConvert)
 
     return array;
 }
-void PrintFrequencyVocabulary(int[] arrayForCountNumber)
+int CountUniqElementsInArray(int[] arrayForCountUniqElements)
 {
-    for (int number = 0; number < 10; number++)
-    {
-        int countNumber = 0;
+    int uniqueCount = 0;
+    bool[] counted = new bool[arrayForCountUniqElements.Length];
 
-        for (int i = 0; i < arrayForCountNumber.Length; i++)
+    for (int i = 0; i < arrayForCountUniqElements.Length; i++)
+    {
+        if (!counted[i])
         {
-            if (number == arrayForCountNumber[i]) countNumber++;
+            uniqueCount++;
+
+            for (int j = i + 1; j < arrayForCountUniqElements.Length; j++)
+            {
+                if (arrayForCountUniqElements[i] == arrayForCountUniqElements[j])
+                {
+                    counted[j] = true;
+                }
+            }
+        }
+    }
+
+    return uniqueCount;
+}
+int[] FillArrayOnlyUniqElements(int[] array)
+{
+    int[] uniqArray = new int[CountUniqElementsInArray(userArray)];
+    int uniqueCount = 0;  // капец сложный момент с uniqueCount 
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        bool isUnique = true;
+
+        // Проверяем, является ли элемент уникальным в массиве
+        for (int j = 0; j < uniqueCount; j++) // чтобы 0 не переносился в конец массива также используем uniqueCount
+        {
+            if (array[i] == uniqArray[j])
+            {
+                isUnique = false;
+                break;
+            }
         }
 
-        if (countNumber != 0) Console.WriteLine($"Число {number} встречается {countNumber} раз");
+        // Если элемент уникальный, добавляем его в новый массив
+        if (isUnique)
+        {
+            uniqArray[uniqueCount] = array[i];
+            uniqueCount++;
+        }
+    }
+
+    return uniqArray;
+}
+void PrintFrequencyVocabulary(int[] arrayForCountNumber, int[] uniqueArray)
+{
+    for (int i = 0; i < uniqueArray.Length; i++)
+    {
+        int element = uniqueArray[i];
+        int countElement = 0;
+        for (int j = 0; j < arrayForCountNumber.Length; j++)
+        {
+            if (element == arrayForCountNumber[j]) countElement++;
+        }
+
+        Console.WriteLine($"{element} встречается {countElement} раз");
     }
 }
 
-int[,] user2DArray = Fill2DArray();
-int[] userArray = Convert2DArrayToArray(user2DArray);
-
 Print2DArray(user2DArray);
 Console.WriteLine();
-PrintFrequencyVocabulary(userArray);
+PrintArray(userArray);
+Console.WriteLine();
+PrintArray(uniqArray);
+PrintFrequencyVocabulary(userArray, uniqArray);
