@@ -65,7 +65,7 @@ void PrintFindNumberFrom2DArray(int[,] array2DForFindNumber)
 {
     Console.Write("Введите искомое число: ");
     int userNumber = Convert.ToInt32(Console.ReadLine());
-    int checkNumber = 0;
+    bool checkNumber = true;
 
     for (int i = 0; i < array2DForFindNumber.GetLength(0); i++)
     {
@@ -74,12 +74,12 @@ void PrintFindNumberFrom2DArray(int[,] array2DForFindNumber)
             if (array2DForFindNumber[i, j] == userNumber)
             {
                 Console.WriteLine($"Число {userNumber} находится на {i} строке, {j} столбце");
-                checkNumber = 1;                
+                checkNumber = false;                
             }
         }
     }
 
-    if (checkNumber == 0) Console.WriteLine($"Числа {userNumber} нет в массиве");
+    if (checkNumber) Console.WriteLine($"Числа {userNumber} нет в массиве");
 }
 
 int[,] userArray = Fill2DArray();
