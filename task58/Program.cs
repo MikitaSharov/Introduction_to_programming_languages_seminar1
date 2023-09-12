@@ -77,11 +77,8 @@ int[,] ProductArrays(int[,] arrayForProductA, int[,] arrayForProductB)
         {
             for (int j = 0; j < colsA; j++)
             {
-                for (int n = 0; n < rowsB; n++)
-                {
-                    productElements = arrayForProductA[i, j] * arrayForProductB[n, m];
-                    result[i, m] += productElements;
-                }
+                productElements = arrayForProductA[i, j] * arrayForProductB[j, m];
+                result[i, m] += productElements;
             }
         }
     }
